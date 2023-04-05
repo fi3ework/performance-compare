@@ -22,10 +22,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm i
 
       - name: Run benchmark
-        run: node benchmark.mjs -n=${{ inputs.repeation }}
+        run: |
+          node benchmark.mjs -n=${{ inputs.repeation }}
+          node benchmark.mjs -n=${{ inputs.repeation }}
+          node benchmark.mjs -n=${{ inputs.repeation }}
+          node benchmark.mjs -n=${{ inputs.repeation }}
+          node benchmark.mjs -n=${{ inputs.repeation }}
+          node benchmark.mjs -n=${{ inputs.repeation }}
